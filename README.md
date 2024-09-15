@@ -12,7 +12,7 @@ This project demonstrates a **Binary Phase Shift Keying (BPSK)** communication s
 - **GNU Radio**: Utilizes the power of GNU Radio for digital signal processing and flow graph design.
 - **BladeRF**: Supports BladeRF SDR for hardware-based transmission and reception.
 
-- ## Team Members
+## Team Members
 - **Mihiran Wickramarathne**
 - **Dasuni Herath**
 - **Shaveen Herath**
