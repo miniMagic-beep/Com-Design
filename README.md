@@ -11,3 +11,9 @@ This project demonstrates a **Binary Phase Shift Keying (BPSK)** communication s
 - **Image Transmission**: Send images from one device to another wirelessly.
 - **GNU Radio**: Utilizes the power of GNU Radio for digital signal processing and flow graph design.
 - **BladeRF**: Supports BladeRF SDR for hardware-based transmission and reception.
+
+- ## Team Members
+- **Mihiran Wickramarathne**
+- **Dasuni Herath**
+- **Shaveen Herath**
+- **Danidu Dabare**
