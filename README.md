@@ -2,7 +2,7 @@
 
 # How to Run
 
-First Download tx.py, rx.py , finalfinal.grc(I am lazy to rename it).
+First Download `tx.py`, `rx.py` , `finalfinal.grc`(I am lazy to rename it).
 
 1. **Prepare the File**
    - Rename the file to be transmitted as `images.jpeg` (or update the filename in the code).
