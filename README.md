@@ -1,5 +1,19 @@
 # BPSK Communication System with GNU Radio and BladeRF
 
+# How to Run
+
+1. **Prepare the File**
+   - Rename the file to be transmitted as `images.jpeg` (or update the filename in the code).
+   - Run `python3 tx.py`, which will create a file named `output.tmp`.
+
+2. **Set Up BladeRF and GNU Radio**
+   - Connect a single BladeRF with both antennas attached (Tx and Rx).
+   - Run `finalfinal.grc` in GNU Radio, ensuring the path to `output.tmp` is correctly set in the file block.
+   - The flowgraph implements both the transmitter and receiver, creating a file named `output.tmp`.
+
+3. **Receive and Process the File**
+   - Copy `output.tmp` to the directory containing `rx.py`.
+   - Run `python3 rx.py` to generate the final output as `Decrypt_image`.
 ## Overview
 This project demonstrates a **Binary Phase Shift Keying (BPSK)** communication system using **GNU Radio** and the **BladeRF SDR**. The system is capable of transmitting images between devices wirelessly with advanced features like Forward Error Correction (FEC), Checksum verification, and AES encryption to ensure secure and reliable data transmission.
 
