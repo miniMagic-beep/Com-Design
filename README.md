@@ -14,6 +14,11 @@
 3. **Receive and Process the File**
    - Copy `output.tmp` to the directory containing `rx.py`.
    - Run `python3 rx.py` to generate the final output as `Decrypt_image`.
+  
+   ---
+
+For any issues, reach me at [wickramarathnemp.21@uom.lk](mailto:wickramarathnemp.21@uom.lk).
+
 ## Overview
 This project demonstrates a **Binary Phase Shift Keying (BPSK)** communication system using **GNU Radio** and the **BladeRF SDR**. The system is capable of transmitting images between devices wirelessly with advanced features like Forward Error Correction (FEC), Checksum verification, and AES encryption to ensure secure and reliable data transmission.
 
