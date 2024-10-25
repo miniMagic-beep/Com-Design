@@ -2,6 +2,8 @@
 
 # How to Run
 
+First Download tx.py, rx.py , finalfinal.grc(I am lazy to rename it).
+
 1. **Prepare the File**
    - Rename the file to be transmitted as `images.jpeg` (or update the filename in the code).
    - Run `python3 tx.py`, which will create a file named `output.tmp`.
