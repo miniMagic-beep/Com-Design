@@ -1,37 +1,4 @@
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad,pad
-
-def decrypt_file(key):
-    global content
-    ciphertext = content
-
-    # Create AES cipher object
-    cipher = AES.new(key, AES.MODE_ECB)
-
-    # List of padding schemes to try
-    padding_schemes = [pad.NoPadding]
-
-    for padding_scheme in padding_schemes:
-        try:
-            # Perform decryption attempt with a padding scheme
-            decrypted = cipher.decrypt(padding_scheme().unpad(ciphertext, AES.block_size))
-            
-            # Write the decrypted file
-            with open('decrypted_file', 'wb') as file:
-                file.write(decrypted)
-            
-            print(f"Decryption successful using {padding_scheme.__name__}. Decrypted content saved in 'decrypted_file'.")
-            break  # Exit the loop on successful decryption
-
-        except ValueError as e:
-            print(f"Decryption failed using {padding_scheme.__name__}: {e}. Trying the next padding scheme.")
-
-    else:
-        print("Decryption failed with all padding schemes. Check padding or altered content.")
-
-# Rest of your code remains the same...
-
-
 
 # Function to remove both front and back preambles and sequence from file
 def remove_preamble(file_path):
@@ -64,6 +31,20 @@ def remove_preamble(file_path):
             break
         else:
             content = content[:end_index]
+
+
+
+
+def decrypt_file(key):
+    
+    ciphertext = content
+    cipher = AES.new(key, AES.MODE_ECB)  
+    decrypted = cipher.decrypt(ciphertext).rstrip(b'\0')  # Removing padding
+    
+    #Write the decrypted file
+    with open('decrypted_file', 'wb') as file:
+        file.write(decrypted)
+
 
 #Key
 predefined_key = b'Hello_IamMihiran'
